@@ -11,15 +11,21 @@ turtle.colormode(255)
 timmy.penup()
 timmy.hideturtle()
 timmy.goto(-300, -300)
-for _ in range(5):
-    for _ in range(10):
-        timmy.forward(50)
-        timmy.dot(20, choice(color_list))
-    timmy.sety(timmy.ycor()+50)
-    for _ in range(10):
-        timmy.dot(20, choice(color_list))
-        timmy.backward(50)
-    timmy.sety(timmy.ycor()+50)
+
+
+def paint(columns):
+    for _ in range(int(columns / 2)):
+        for _ in range(columns):
+            timmy.forward(50)
+            timmy.dot(20, choice(color_list))
+        timmy.sety(timmy.ycor()+50)
+        for _ in range(columns):
+            timmy.dot(20, choice(color_list))
+            timmy.backward(50)
+        timmy.sety(timmy.ycor()+50)
+
+
+paint(4)
 screen = turtle.Screen()
 screen.exitonclick()
 
