@@ -82,8 +82,8 @@ screen.exitonclick()
 #         timmy.circle(100)
 #         timmy.setheading(tilt)
 #         tilt += 360 / num
-# #
-# #
+#
+#
 # draw_spiral(100)
 
 # Colorgram
